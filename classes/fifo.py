@@ -7,15 +7,9 @@ class Fifo(PageReplacement):
         self.frames_quantity = frames_quantity
         self.pages_quantity = pages_quantity
         self.page_sequence = page_sequence
-        self.pages = [i for i in range(pages_quantity)]
         self.page_fault = 0
         self.fifo = []
 
-    
-    # MEMÓRIA FISICA 2 PÁGINAS 
-    # MEMÓRIA VIRTUAL 5 PÁGINAS
-
-    # INTERAR O (page_sequence) E FAZER ESSE PROCESSO DE INSERTAR NO FIFO 
 
     def insert_fifo(self, page):
         if page in self.fifo:
@@ -41,7 +35,7 @@ class Fifo(PageReplacement):
     def run(self):
         for page in self.page_sequence:
             self.insert_fifo(page)
-        print(self.page_fault)
+        return self.page_fault
         
 
 

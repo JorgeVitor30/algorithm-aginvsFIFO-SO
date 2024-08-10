@@ -10,4 +10,3 @@ def get_sequence(page_quantity: int, file_name: str):
     with open(f"{file_name}.txt", "w") as arquivo:
         for page in sequence:
             arquivo.write(f"{page}\n")
-

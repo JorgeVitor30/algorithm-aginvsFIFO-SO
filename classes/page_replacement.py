@@ -16,9 +16,5 @@ class PageReplacement(ABC):
         pass
 
     @abstractmethod
-    def save_results():
-        pass
-
-    @abstractmethod
     def run():
         pass
