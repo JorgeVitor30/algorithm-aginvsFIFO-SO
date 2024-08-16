@@ -1,4 +1,4 @@
-from page_replacement import PageReplacement
+from classes.page_replacement import PageReplacement
 
 
 class Fifo(PageReplacement):
@@ -36,9 +36,3 @@ class Fifo(PageReplacement):
         for page in self.page_sequence:
             self.insert_fifo(page)
         return self.page_fault
-        
-
-
-fifo = Fifo(frames_quantity=2, page_sequence=[0,1,1,2,3])
-print(fifo.run())
-
